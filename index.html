@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>provayder.net</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<!-- Модальные (всплывающие) окна --> 
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body" id="modal-body">
+        <h1>Данные успешно отправлены!</h1>
+        <p class="modal_p">В течение 15 минут наш оператор свяжется с вами для подтверждения выбранного тарифа.</p>
+        <p class="modal_respect">Мы очень ценим вас!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header">
+    	<h1>Что вас интересует?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <button class="modal_batton1" data-bs-toggle="modal" href="#exampleModalToggle3">Подключение</button><br>
+        <button class="modal_batton2" data-bs-toggle="modal" href="#exampleModalToggle4">Другие вопросы</button><br>
+        <button class="modal_batton2" data-bs-toggle="modal" href="#exampleModalToggle5">Заказать обратный звонок</button><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header">
+    	<h1>Отличные новости!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-body">
+      	<p class="modal_p">Клиентам после подключения мы дарим подарки от наших партнеров.</p>
+      	<p class="modal_p"><b>Узнать условия и получить консультацию</b></p>
+      	<input type="text" name="" placeholder="Введите  ваш город" id="input_modal">
+		<input type="text" name="" placeholder="Введите  ваш телефон" id="input_modal"><br><br>
+		<button class="modal_batton3" data-bs-toggle="modal" href="#exampleModalToggle">Отправить</button><br>
+		<p class="modal_politics">Отправляя заявку, вы соглашаетесь с политикой обработки персональных данных</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header">
+    	<h1>У вас вопрос?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-body" style="text-align: left;">
+      	<p class="modal_p">Если вам нужна техническая поддержка действующих клиентов. Если не работает интернет или телевидение, тормозит интернет, вы хотите проверить/пополнить баланс, отключить услуги, рассторгнуть договор.</p>
+      	<p class="modal_p">Свяжитесь по телефону технической поддержки</p>
+      	<h1 class="modal_h1">8 800 1000 800</h1>
+      	<p class="modal_p">Если вам нужно проверить кабель в новой квартире, переоформить договор на другого жильца, у вас переезд на другой адрес или подключение на новом адресе.</p>
+      	<p class="modal_p">Свяжитесь по телефону отдела продаж</p>
+      	<h1 class="modal_h1">8 800 2000 800</h1>
+    	</div>
+  </div>
+</div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle5" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header">
+    	<h1>Узнать условия и получить консультацию</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-body">
+      	<input type="text" name="" placeholder="Введите  ваш город" id="input_modal">
+		<input type="text" name="" placeholder="Введите  ваш телефон" id="input_modal"><br><br>
+		<button class="modal_batton3" data-bs-toggle="modal" href="#exampleModalToggle">Отправить</button><br>
+		<p class="modal_politics">Отправляя заявку, вы соглашаетесь с политикой обработки персональных данных</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle6" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header">
+    	<h1>Хорошие новости!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-body">
+      	<p class="modal_p">По вашему адресу можно подключить услуги от 250 руб/мес и скоростью до 1000 мбит/с.</p>
+      	<button class="modal_batton1" data-bs-toggle="modal" href="">Показать тарифы</button><br>
+      	<p class="modal_p"><b>Или оставить заявку для консультации</b></p>
+		<input type="text" name="" placeholder="Введите  ваш телефон" id="input_modal"><br><br>
+		<button class="modal_batton3" data-bs-toggle="modal" href="#exampleModalToggle">Отправить</button><br>
+		<p class="modal_politics">Отправляя заявку, вы соглашаетесь с политикой обработки персональных данных</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle7" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header">
+    	<h1>Интересные новости!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-body">
+      	<p class="modal_p">По вашему адресу требуется дополнительная проверка по доступности подключения.</p>
+      	<p class="modal_p"><b>Наш специалист проверит информацию и перезвонит вам в течение 15 минут!</b></p>
+		<input type="text" name="" placeholder="Введите ваш телефон" id="input_modal"><br><br>
+		<button class="modal_batton3" data-bs-toggle="modal" href="#exampleModalToggle">Отправить</button><br>
+		<p class="modal_politics">Отправляя заявку, вы соглашаетесь с политикой обработки персональных данных</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle8" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header">
+    	<h1>Отлично, теперь введите ваш адрес</h1>
+      </div>
+      <div class="modal-body" id="modal-body">
+      	<p class="modal_p">Мы проверим возможность подключения по адресу и свободные порты</p>
+		<input type="text" name="" placeholder="Введите ваш город" id="input_modal"><br>
+		<input type="text" name="" placeholder="Ваша улица" id="input_modal">
+		<input type="text" name="" placeholder="№ Дома" id="input_modal"><br><br>
+		<button class="modal_batton3" data-bs-toggle="modal" href="#exampleModalToggle9">Продолжить</button><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle9" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header">
+    	<h1>Остался последний шаг!</h1>
+      </div>
+      <div class="modal-body" id="modal-body">
+      	<p class="modal_p">Напишите ваше имя и номер телефона.</p>
+      	<p class="modal_p"><b>Оператор свяжется с вами!</b></p>
+		<input type="text" name="" placeholder="Введите ваш город" id="input_modal"><br>
+		<input type="text" name="" placeholder="Введите ваше имя" id="input_modal">
+		<input type="text" name="" placeholder="Введите номер телефона" id="input_modal"><br><br>
+		<button class="modal_batton3" data-bs-toggle="modal" href="#exampleModalToggle">Готово</button><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle10" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body" id="modal-body">
+      	<img src="img/logo.jpg" width="82px">
+      	<h1><b>ИНТЕРНЕТ+ТВ+СВЯЗЬ</b></h1>
+      	<p>Технология выгоды. PRO</p>
+      	<div class="modal_bod">
+      		<h1>Подключение тарифа</h1>
+      		<div class="row">
+      			<div class="col" id="modal_img1">
+      				<img src="img/wifi.png" width="24px">
+      				<p><b>200</b></p>
+      				<p class="modal_p_tarif">Мбит/с</p>
+      			</div>
+      			<div class="col" id="modal_img2">
+      				<img src="img/gb.png" width="24px">
+      				<p><b>50</b></p>
+      				<p class="modal_p_tarif">ГБ</p>
+      			</div>
+      			<div class="col" id="modal_img2">
+      				<img src="img/tv.png" width="24px">
+      				<p><b>146</b></p>
+      				<p class="modal_p_tarif">Каналов</p>
+      			</div>
+      		</div>
+      		<input type="text" name="" placeholder="Введите ваше имя" id="input_modal">
+		<input type="text" name="" placeholder="Введите ваш телефон" id="input_modal">
+		<input type="text" name="" placeholder="Введите ваш город" id="input_modal">
+		<input type="text" name="" placeholder="Ваша улица" id="input_modal_street" id="street">
+		<input type="text" name="" placeholder="№ дома" id="input_modal_street1"><br><br>
+
+		<div class="row">
+			<div class="col" id="rad">
+				<nobr>Стоимость подключения</nobr>
+			</div>
+			<div class="col" id="rad1">
+				<nobr>0 ₽</nobr>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col" id="rad">
+				<nobr>Абонентская плата в месяц</nobr>
+			</div>
+			<div class="col" id="rad1">
+				<nobr>1470 ₽</nobr>
+			</div>
+		</div>
+		<br>
+		<button class="modal_batton1" data-bs-toggle="modal" href="#exampleModalToggle">Отправить</button>
+
+		<p class="modal_politics">Отправляя заявку, вы соглашаетесь с политикой обработки персональных данных</p>
+      	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle11" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header">
+    	<h1><b>Выберите город</b></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-body">
+		<input type="text" name="" placeholder="Поиск" id="input_modal">
+		<p class="modal_geo"><img src="img/geo.jpg" width="11px" height="14px"> Определить автоматически</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<body>
+	<div class="main">
+		<nav class="navbar navbar-expand-lg navbar-light bg-white" id="nav">
+			<div class="container-fluid">
+		    	<a class="navbar-brand" href="#"><img src="img/logo.jpg" id="logo"></a>
+		        <a href="#exampleModalToggle2" data-bs-toggle="modal"><img src="img/tel.jpg" id="tel"></a>
+		  	</div>
+		</nav>
+
+		<div class="line"></div>
+
+		<div class="region">
+			<div class="row"> 
+				<div class="col">
+					<img src="img/geo.jpg" id="geo">
+				</div>
+				<div class="col">
+					<p class="geo_name">Москва и Московская область</p>
+				</div>
+				<div class="col">
+					<button class="change_region" href="#exampleModalToggle11" data-bs-toggle="modal">Изменить регион</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="address">
+			<h1 id="address">Проверить адрес подключения в г. Москва</h1>
+			<h2 id="address">Введите адрес, где планируете подключение</h2>
+			<!--<form action="" method="" class="form_address">-->
+				<div class="form_address">
+					<input type="text" name="" placeholder="Введите улицу" id="input1">
+					<input type="text" name="" placeholder="№ дома" id="input2">
+					<button class="confirm" href="#exampleModalToggle6" data-bs-toggle="modal">Проверить</button>
+				</div>
+			<!--</form>	-->
+		</div>
+
+		<div class="free_connection">
+			<h1>Бесплатное подключение и прозрачная абонентская плата!</h1>
+		</div>
+
+		<div class="tariff">
+			<h1 id="tariff">Тарифы на домашний интернет и телевидение</h1>
+			<h3>Сортировать услуги</h3>
+			<form action="" method="" class="form_tariff">
+				<span class="class1"><input type="checkbox" class="form-check-input" name="" value="Интернет">&nbsp; Интернет</span>
+				<span class="class1"><input type="checkbox" class="form-check-input" id="check-input" name="" value="Телевидение">&nbsp; Телевидение</span><br>
+				<span class="class1"><input type="checkbox" class="form-check-input" name="" value="Интернет+ТВ">&nbsp; Интернет+ТВ	</span>
+				<span class="class1"><input type="checkbox" class="form-check-input" id="check-input1" name="" value="Интернет+ТВ+SIM">&nbsp; Интернет+ТВ+SIM</span>
+			</form>
+		</div>
+
+		<div class="sale">
+			<div class="offer">
+				<div class="row" id="internet"> 
+					<div class="col">	
+						<h1>Интернет</h1>
+						<p class="for_internet">Для улетного настроения</p>
+					</div>
+					<div class="col">	
+						<p class="act"><b>Акция %</b></p>
+					</div>
+				</div>
+				<div class="row"> 
+					<div class="col" id="point1">	
+						<p class="mbs"><img src="img/wifi.png" id="wifi">&nbsp;100  мбит/с</p>
+					</div>
+					<div class="col">	
+						<p class="strike"><strike>350 ₽</strike></p>
+						<p class="price_act">250 ₽</p>
+						<p class="month">В месяц</p>
+					</div>
+				</div>
+				<div class="row" id="connect"> 
+					<div class="col">
+						<button class="connect" href="#exampleModalToggle10" data-bs-toggle="modal">Подключить</button>
+					</div>
+					<div class="col">
+						<p class="more"><a href="tarif.html">Подробнее</a></p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="offer">
+				<div class="row" id="internet"> 
+					<div class="col">	
+						<h1>Интернет+ТВ </h1>
+						<p class="for_internet">Технология выгоды. PRO</p>
+					</div>
+					<div class="col">	
+						<p class="act"><b></b></p>
+					</div>
+				</div>
+				<div class="row"> 
+					<div class="col" id="point2">	
+						<p class="mbs"><img src="img/wifi.png" id="wifi">&nbsp;200  мбит/с</p>
+						<p class="mbs"><img src="img/tv.png" id="wifi">&nbsp;187 каналов</p>
+					</div>
+					<div class="col">	
+						<p class="strike"><strike></strike></p>
+						<p class="price">600 ₽</p>
+						<p class="month">В месяц</p>
+					</div>
+				</div>
+				<div class="row" id="connect2"> 
+					<div class="col">
+						<button class="connect" href="#exampleModalToggle10" data-bs-toggle="modal">Подключить</button>
+					</div>
+					<div class="col">
+						<p class="more"><a href="tarif.html">Подробнее</a></p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="offer">
+				<div class="row" id="internet"> 
+					<div class="col">	
+						<h1>Интернет+ТВ+Связь  </h1>
+						<p class="for_internet">Технология выгоды. PRO</p>
+					</div>
+					<div class="col">	
+						<p class="act"><b></b></p>
+					</div>
+				</div>
+				<div class="row"> 
+					<div class="col" id="point3">	
+						<p class="mbs"><img src="img/wifi.png" id="wifi">&nbsp;200  мбит/с</p>
+						<p class="mbs"><img src="img/tv.png" id="wifi">&nbsp;187 каналов</p>
+						<p class="mbs"><img src="img/gb.png" id="wifi">&nbsp;∞ ГБ</p>
+					</div>
+					<div class="col">	
+						<p class="strike"><strike></strike></p>
+						<p class="price">1470 ₽</p>
+						<p class="month">В месяц</p>
+					</div>
+				</div>
+				<div class="row" id="connect"> 
+					<div class="col">
+						<button class="connect" href="#exampleModalToggle10" data-bs-toggle="modal">Подключить</button>
+					</div>
+					<div class="col">
+						<p class="more"><a href="tarif.html">Подробнее</a></p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="offer">
+				<div class="row" id="internet"> 
+					<div class="col">	
+						<h1>Телевидение</h1>
+						<p class="for_internet">Технология просмотра</p>
+					</div>
+					<div class="col">	
+						<p class="act"><b></b></p>
+					</div>
+				</div>
+				<div class="row"> 
+					<div class="col" id="point1">	
+						<p class="mbs"><img src="img/tv.png" id="wifi">&nbsp;187 каналов</p>
+					</div>
+					<div class="col">	
+						<p class="strike"><strike></strike></p>
+						<p class="price">170 ₽</p>
+						<p class="month" id="tv">В месяц</p>
+					</div>
+				</div>
+				<div class="row" id="connect2"> 
+					<div class="col">
+						<button class="connect" href="#exampleModalToggle10" data-bs-toggle="modal">Подключить</button>
+					</div>
+					<div class="col">
+						<p class="more"><a href="tarif.html">Подробнее</a></p>
+					</div>
+				</div>
+			</div>
+
+				<div class="pesontedan">
+					<input id="pesontedan" type="checkbox" name="pesontedans">
+					<label for="pesontedan"><b>Еще тарифы</b></label>
+					<div class="pesontedan-content">
+						<div class="offer">
+							<div class="row" id="internet"> 
+								<div class="col">	
+									<h1>Интернет+ТВ+Связь  </h1>
+									<p class="for_internet">Технология выгоды. PRO</p>
+								</div>
+								<div class="col">	
+									<p class="act"><b></b></p>
+								</div>
+							</div>
+							<div class="row"> 
+								<div class="col" id="point3">	
+									<p class="mbs"><img src="img/wifi.png" id="wifi">&nbsp;200  мбит/с</p>
+									<p class="mbs"><img src="img/tv.png" id="wifi">&nbsp;187 каналов</p>
+									<p class="mbs"><img src="img/gb.png" id="wifi">&nbsp;∞ ГБ</p>
+								</div>
+								<div class="col">	
+									<p class="strike"><strike></strike></p>
+									<p class="price">1470 ₽</p>
+									<p class="month">В месяц</p>
+								</div>
+							</div>
+							<div class="row" id="connect"> 
+								<div class="col">
+									<button class="connect" href="#exampleModalToggle10" data-bs-toggle="modal">Подключить</button>
+								</div>
+								<div class="col">
+									<p class="more"><a href="tarif.html">Подробнее</a></p>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="offer">
+							<div class="row" id="internet"> 
+								<div class="col">	
+									<h1>Телевидение</h1>
+									<p class="for_internet">Технология просмотра</p>
+								</div>
+								<div class="col">	
+									<p class="act"><b></b></p>
+								</div>
+							</div>
+							<div class="row"> 
+								<div class="col" id="point1">	
+									<p class="mbs"><img src="img/tv.png" id="wifi">&nbsp;187 каналов</p>
+								</div>
+								<div class="col">	
+									<p class="strike"><strike></strike></p>
+									<p class="price">170 ₽</p>
+									<p class="month" id="tv">В месяц</p>
+								</div>
+							</div>
+							<div class="row" id="connect"> 
+								<div class="col">
+									<button class="connect" href="#exampleModalToggle10" data-bs-toggle="modal">Подключить</button>
+								</div>
+								<div class="col">
+									<p class="more"><a href="tarif.html">Подробнее</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		<div class="address" id="address2">
+			<h1 id="form2">Оставьте заявку, чтобы мы подобрали для вас тариф</h1>
+			<!--<form class="form_address">-->
+				<div class="form_address">
+					<input type="text" name="" placeholder="Введите ваше имя" id="input3">
+					<input type="text" name="" placeholder="Введите ваш телефон" id="input4">
+					<button class="confirm" id="confirm2" data-bs-toggle="modal" href="#exampleModalToggle">Подобрать тариф</button>
+				</div>
+			<!--</form>-->	
+		</div>
+
+
+		<div class="date">
+			<h1 id="tariff">Выберите желаемую дату подключения</h1>
+			<table id="calendar2">
+			  <thead>
+			    <tr><td>‹<td colspan="5"><td>›</tr>
+			    <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+			  <tbody>
+			</table>
+			<script src="js/script.js"></script>
+
+			<button class="confirm3" href="#exampleModalToggle8" data-bs-toggle="modal">Выбрать дату</button>
+		</div>
+
+		<div class="free_connection">
+			<h1>При подключении впервый раз <br> 1-ый месяц в подарок!</h1>
+		</div>
+
+		<div class="review">
+			<h1 id="tariff">Отзывы</h1>
+			<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+			  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+			  <label class="btn btn-outline-dark" for="btnradio1" id="review_btn">Положительные</label>
+
+			  <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" checked>
+			  <label class="btn btn-outline-dark" for="btnradio2" id="review_btn">Отрицательные</label>
+
+			  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+			  <label class="btn btn-outline-dark" for="btnradio3" id="review_btn">Все</label>
+			</div>
+
+			<div class="report">
+				<div class="row"> 
+					<div class="col">
+						<p class="name">Рамзан Ахматович</p>
+						<p class="telecom">Ростелеком Москва</p>
+						<p class="review_date">от 01.01.2021</p>
+					</div>
+					<div class="col" id="img_not">
+						<!--<img src="img/like.jpg" id="not">
+						<img src="img/dislike.jpg" id="not">-->
+
+						<svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1.08862 11.6035C1.08862 10.8276 1.80487 10.1113 2.79118 10.1113H6.25581V17.6565C6.01264 17.7761 5.73355 17.8455 5.43427 17.8455H2.79118C1.80487 17.8455 1.08862 17.1292 1.08862 16.3534V11.6035Z" stroke="#B0019E"/>
+						<path d="M19.6508 9.82016L19.3331 10.1711L19.6662 10.5075C19.9151 10.7589 20.0592 11.0997 20.0592 11.4685C20.0592 11.9993 19.7589 12.4641 19.3125 12.691L18.8709 12.9155L19.0913 13.3591C19.1839 13.5455 19.2332 13.752 19.2332 13.9708C19.2332 14.5021 18.9324 14.967 18.4857 15.194L18.0439 15.4186L18.2646 15.8624C18.4022 16.1391 18.4444 16.4606 18.3733 16.7858C18.2415 17.3876 17.6687 17.8497 16.9902 17.8497H9.40865C9.12536 17.8497 8.71165 17.7914 8.28304 17.6715L8.14841 18.1531L8.28303 17.6715C8.03863 17.6032 7.84375 17.3484 7.84375 16.9982V9.22164C7.84375 9.09482 7.8718 8.96957 7.92589 8.85486L10.144 4.15113C10.261 3.90304 10.3216 3.63213 10.3216 3.35783V0.874388C10.4582 0.778161 10.9011 0.5 11.4735 0.5C11.5874 0.5 11.77 0.549285 12.0008 0.692088C12.2254 0.831044 12.4649 1.04009 12.6847 1.30734C13.1268 1.84487 13.4514 2.57011 13.4514 3.33629C13.4514 4.1739 13.2102 5.20788 12.98 5.9955C12.8117 6.57134 13.2346 7.17258 13.8562 7.17258H18.396C19.2669 7.17258 19.9805 7.82348 20.0521 8.60883C20.0931 9.06386 19.943 9.49722 19.6508 9.82016Z" stroke="#B0019E"/>
+						</svg>
+
+
+						<svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M20.0176 6.72782C20.0176 7.51749 19.297 8.23779 18.315 8.23779L14.8504 8.23779L14.8504 0.694819C15.0937 0.573712 15.3728 0.503601 15.6719 0.503601L18.315 0.503601C19.297 0.503601 20.0176 1.2239 20.0176 2.01358L20.0176 6.72782Z" fill="#B0019E" stroke="#B0019E"/>
+						<path d="M1.45545 8.52945L1.77311 8.17847L1.44002 7.84211C1.19109 7.59074 1.04704 7.24987 1.04704 6.88109C1.04704 6.35029 1.3473 5.88554 1.79365 5.65864L2.23526 5.43415L2.01488 4.99049C1.92231 4.80414 1.87299 4.59759 1.87299 4.37886C1.87299 3.84753 2.17384 3.38263 2.62046 3.15559L3.06226 2.93101L2.84158 2.48725C2.70399 2.21055 2.66183 1.88909 2.73283 1.56402C2.86462 0.962073 3.43743 0.499963 4.11602 0.499963L11.6976 0.499964C11.9808 0.499964 12.3945 0.558237 12.8232 0.678074C13.0676 0.746406 13.2625 1.00119 13.2625 1.35143L13.2625 9.12797C13.2625 9.25479 13.2344 9.38004 13.1803 9.49475L10.9622 14.1985C10.8452 14.4466 10.7846 14.7175 10.7846 14.9918L10.7846 17.4752C10.648 17.5714 10.2051 17.8496 9.63266 17.8496C9.51885 17.8496 9.3362 17.8003 9.10539 17.6575C8.8808 17.5186 8.64132 17.3095 8.4215 17.0423C7.97939 16.5047 7.65476 15.7795 7.65476 15.0133C7.65476 14.1757 7.89596 13.1417 8.12618 12.3541C8.2945 11.7783 7.87162 11.177 7.25 11.177L2.71024 11.177C1.83939 11.177 1.12574 10.5262 1.05409 9.7409C1.01307 9.28583 1.16315 8.85242 1.45545 8.52945Z" fill="#B0019E" stroke="#B0019E"/>
+						</svg>
+					</div>
+				</div>
+
+				<div class="message">
+					<p><span>Подключил интернет от РТ в надежде получить более качественный сервис по сравнению с существующим оператором. В итоге мне помогли специалисты, но все равно остался осадок.</span> <b>Читать дальше...</b></p>
+				</div>
+			</div>
+
+
+			<div class="report">
+				<div class="row"> 
+					<div class="col">
+						<p class="name">Рамзан Ахматович</p>
+						<p class="telecom">Ростелеком Москва</p>
+						<p class="review_date">от 01.01.2021</p>
+					</div>
+					<div class="col" id="img_not">
+						<!--<img src="img/like.jpg" id="not">
+						<img src="img/dislike.jpg" id="not">-->
+
+						<svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1.08862 11.6035C1.08862 10.8276 1.80487 10.1113 2.79118 10.1113H6.25581V17.6565C6.01264 17.7761 5.73355 17.8455 5.43427 17.8455H2.79118C1.80487 17.8455 1.08862 17.1292 1.08862 16.3534V11.6035Z" stroke="#B0019E"/>
+						<path d="M19.6508 9.82016L19.3331 10.1711L19.6662 10.5075C19.9151 10.7589 20.0592 11.0997 20.0592 11.4685C20.0592 11.9993 19.7589 12.4641 19.3125 12.691L18.8709 12.9155L19.0913 13.3591C19.1839 13.5455 19.2332 13.752 19.2332 13.9708C19.2332 14.5021 18.9324 14.967 18.4857 15.194L18.0439 15.4186L18.2646 15.8624C18.4022 16.1391 18.4444 16.4606 18.3733 16.7858C18.2415 17.3876 17.6687 17.8497 16.9902 17.8497H9.40865C9.12536 17.8497 8.71165 17.7914 8.28304 17.6715L8.14841 18.1531L8.28303 17.6715C8.03863 17.6032 7.84375 17.3484 7.84375 16.9982V9.22164C7.84375 9.09482 7.8718 8.96957 7.92589 8.85486L10.144 4.15113C10.261 3.90304 10.3216 3.63213 10.3216 3.35783V0.874388C10.4582 0.778161 10.9011 0.5 11.4735 0.5C11.5874 0.5 11.77 0.549285 12.0008 0.692088C12.2254 0.831044 12.4649 1.04009 12.6847 1.30734C13.1268 1.84487 13.4514 2.57011 13.4514 3.33629C13.4514 4.1739 13.2102 5.20788 12.98 5.9955C12.8117 6.57134 13.2346 7.17258 13.8562 7.17258H18.396C19.2669 7.17258 19.9805 7.82348 20.0521 8.60883C20.0931 9.06386 19.943 9.49722 19.6508 9.82016Z" stroke="#B0019E"/>
+						</svg>
+
+
+						<svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M20.0176 6.72782C20.0176 7.51749 19.297 8.23779 18.315 8.23779L14.8504 8.23779L14.8504 0.694819C15.0937 0.573712 15.3728 0.503601 15.6719 0.503601L18.315 0.503601C19.297 0.503601 20.0176 1.2239 20.0176 2.01358L20.0176 6.72782Z" fill="#B0019E" stroke="#B0019E"/>
+						<path d="M1.45545 8.52945L1.77311 8.17847L1.44002 7.84211C1.19109 7.59074 1.04704 7.24987 1.04704 6.88109C1.04704 6.35029 1.3473 5.88554 1.79365 5.65864L2.23526 5.43415L2.01488 4.99049C1.92231 4.80414 1.87299 4.59759 1.87299 4.37886C1.87299 3.84753 2.17384 3.38263 2.62046 3.15559L3.06226 2.93101L2.84158 2.48725C2.70399 2.21055 2.66183 1.88909 2.73283 1.56402C2.86462 0.962073 3.43743 0.499963 4.11602 0.499963L11.6976 0.499964C11.9808 0.499964 12.3945 0.558237 12.8232 0.678074C13.0676 0.746406 13.2625 1.00119 13.2625 1.35143L13.2625 9.12797C13.2625 9.25479 13.2344 9.38004 13.1803 9.49475L10.9622 14.1985C10.8452 14.4466 10.7846 14.7175 10.7846 14.9918L10.7846 17.4752C10.648 17.5714 10.2051 17.8496 9.63266 17.8496C9.51885 17.8496 9.3362 17.8003 9.10539 17.6575C8.8808 17.5186 8.64132 17.3095 8.4215 17.0423C7.97939 16.5047 7.65476 15.7795 7.65476 15.0133C7.65476 14.1757 7.89596 13.1417 8.12618 12.3541C8.2945 11.7783 7.87162 11.177 7.25 11.177L2.71024 11.177C1.83939 11.177 1.12574 10.5262 1.05409 9.7409C1.01307 9.28583 1.16315 8.85242 1.45545 8.52945Z" fill="#B0019E" stroke="#B0019E"/>
+						</svg>
+					</div>
+				</div>
+
+				<div class="message">
+					<p><span>Подключил интернет от РТ в надежде получить более качественный сервис по сравнению с существующим оператором. В итоге мне помогли специалисты, но все равно остался осадок.</span> <b>Читать дальше...</b></p>
+				</div>
+			</div>
+
+
+
+			<div class="report">
+				<div class="row"> 
+					<div class="col">
+						<p class="name">Рамзан Ахматович</p>
+						<p class="telecom">Ростелеком Москва</p>
+						<p class="review_date">от 01.01.2021</p>
+					</div>
+					<div class="col" id="img_not">
+						<!--<img src="img/like.jpg" id="not">
+						<img src="img/dislike.jpg" id="not">-->
+
+						<svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1.08862 11.6035C1.08862 10.8276 1.80487 10.1113 2.79118 10.1113H6.25581V17.6565C6.01264 17.7761 5.73355 17.8455 5.43427 17.8455H2.79118C1.80487 17.8455 1.08862 17.1292 1.08862 16.3534V11.6035Z" stroke="#B0019E"/>
+						<path d="M19.6508 9.82016L19.3331 10.1711L19.6662 10.5075C19.9151 10.7589 20.0592 11.0997 20.0592 11.4685C20.0592 11.9993 19.7589 12.4641 19.3125 12.691L18.8709 12.9155L19.0913 13.3591C19.1839 13.5455 19.2332 13.752 19.2332 13.9708C19.2332 14.5021 18.9324 14.967 18.4857 15.194L18.0439 15.4186L18.2646 15.8624C18.4022 16.1391 18.4444 16.4606 18.3733 16.7858C18.2415 17.3876 17.6687 17.8497 16.9902 17.8497H9.40865C9.12536 17.8497 8.71165 17.7914 8.28304 17.6715L8.14841 18.1531L8.28303 17.6715C8.03863 17.6032 7.84375 17.3484 7.84375 16.9982V9.22164C7.84375 9.09482 7.8718 8.96957 7.92589 8.85486L10.144 4.15113C10.261 3.90304 10.3216 3.63213 10.3216 3.35783V0.874388C10.4582 0.778161 10.9011 0.5 11.4735 0.5C11.5874 0.5 11.77 0.549285 12.0008 0.692088C12.2254 0.831044 12.4649 1.04009 12.6847 1.30734C13.1268 1.84487 13.4514 2.57011 13.4514 3.33629C13.4514 4.1739 13.2102 5.20788 12.98 5.9955C12.8117 6.57134 13.2346 7.17258 13.8562 7.17258H18.396C19.2669 7.17258 19.9805 7.82348 20.0521 8.60883C20.0931 9.06386 19.943 9.49722 19.6508 9.82016Z" stroke="#B0019E"/>
+						</svg>
+
+
+						<svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M20.0176 6.72782C20.0176 7.51749 19.297 8.23779 18.315 8.23779L14.8504 8.23779L14.8504 0.694819C15.0937 0.573712 15.3728 0.503601 15.6719 0.503601L18.315 0.503601C19.297 0.503601 20.0176 1.2239 20.0176 2.01358L20.0176 6.72782Z" fill="#B0019E" stroke="#B0019E"/>
+						<path d="M1.45545 8.52945L1.77311 8.17847L1.44002 7.84211C1.19109 7.59074 1.04704 7.24987 1.04704 6.88109C1.04704 6.35029 1.3473 5.88554 1.79365 5.65864L2.23526 5.43415L2.01488 4.99049C1.92231 4.80414 1.87299 4.59759 1.87299 4.37886C1.87299 3.84753 2.17384 3.38263 2.62046 3.15559L3.06226 2.93101L2.84158 2.48725C2.70399 2.21055 2.66183 1.88909 2.73283 1.56402C2.86462 0.962073 3.43743 0.499963 4.11602 0.499963L11.6976 0.499964C11.9808 0.499964 12.3945 0.558237 12.8232 0.678074C13.0676 0.746406 13.2625 1.00119 13.2625 1.35143L13.2625 9.12797C13.2625 9.25479 13.2344 9.38004 13.1803 9.49475L10.9622 14.1985C10.8452 14.4466 10.7846 14.7175 10.7846 14.9918L10.7846 17.4752C10.648 17.5714 10.2051 17.8496 9.63266 17.8496C9.51885 17.8496 9.3362 17.8003 9.10539 17.6575C8.8808 17.5186 8.64132 17.3095 8.4215 17.0423C7.97939 16.5047 7.65476 15.7795 7.65476 15.0133C7.65476 14.1757 7.89596 13.1417 8.12618 12.3541C8.2945 11.7783 7.87162 11.177 7.25 11.177L2.71024 11.177C1.83939 11.177 1.12574 10.5262 1.05409 9.7409C1.01307 9.28583 1.16315 8.85242 1.45545 8.52945Z" fill="#B0019E" stroke="#B0019E"/>
+						</svg>
+					</div>
+				</div>
+
+				<div class="message">
+					<p><span>Подключил интернет от РТ в надежде получить более качественный сервис по сравнению с существующим оператором. В итоге мне помогли специалисты, но все равно остался осадок.</span> <b>Читать дальше...</b></p>
+				</div>	
+			</div>
+
+			<div class="pesontedan">
+				<input id="pesontedan-1" type="checkbox" name="pesontedans">
+				<label for="pesontedan-1" id="gg"><b>Читать все отзывы</b></label>
+				<div class="pesontedan-content" id="gg2">
+					<div class="report">
+						<div class="row"> 
+							<div class="col">
+								<p class="name">Рамзан Ахматович</p>
+								<p class="telecom">Ростелеком Москва</p>
+								<p class="review_date">от 01.01.2021</p>
+							</div>
+							<div class="col" id="img_not">
+								<!--<img src="img/like.jpg" id="not">
+								<img src="img/dislike.jpg" id="not">-->
+
+								<svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.08862 11.6035C1.08862 10.8276 1.80487 10.1113 2.79118 10.1113H6.25581V17.6565C6.01264 17.7761 5.73355 17.8455 5.43427 17.8455H2.79118C1.80487 17.8455 1.08862 17.1292 1.08862 16.3534V11.6035Z" stroke="#B0019E"/>
+								<path d="M19.6508 9.82016L19.3331 10.1711L19.6662 10.5075C19.9151 10.7589 20.0592 11.0997 20.0592 11.4685C20.0592 11.9993 19.7589 12.4641 19.3125 12.691L18.8709 12.9155L19.0913 13.3591C19.1839 13.5455 19.2332 13.752 19.2332 13.9708C19.2332 14.5021 18.9324 14.967 18.4857 15.194L18.0439 15.4186L18.2646 15.8624C18.4022 16.1391 18.4444 16.4606 18.3733 16.7858C18.2415 17.3876 17.6687 17.8497 16.9902 17.8497H9.40865C9.12536 17.8497 8.71165 17.7914 8.28304 17.6715L8.14841 18.1531L8.28303 17.6715C8.03863 17.6032 7.84375 17.3484 7.84375 16.9982V9.22164C7.84375 9.09482 7.8718 8.96957 7.92589 8.85486L10.144 4.15113C10.261 3.90304 10.3216 3.63213 10.3216 3.35783V0.874388C10.4582 0.778161 10.9011 0.5 11.4735 0.5C11.5874 0.5 11.77 0.549285 12.0008 0.692088C12.2254 0.831044 12.4649 1.04009 12.6847 1.30734C13.1268 1.84487 13.4514 2.57011 13.4514 3.33629C13.4514 4.1739 13.2102 5.20788 12.98 5.9955C12.8117 6.57134 13.2346 7.17258 13.8562 7.17258H18.396C19.2669 7.17258 19.9805 7.82348 20.0521 8.60883C20.0931 9.06386 19.943 9.49722 19.6508 9.82016Z" stroke="#B0019E"/>
+								</svg>
+
+
+								<svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M20.0176 6.72782C20.0176 7.51749 19.297 8.23779 18.315 8.23779L14.8504 8.23779L14.8504 0.694819C15.0937 0.573712 15.3728 0.503601 15.6719 0.503601L18.315 0.503601C19.297 0.503601 20.0176 1.2239 20.0176 2.01358L20.0176 6.72782Z" fill="#B0019E" stroke="#B0019E"/>
+								<path d="M1.45545 8.52945L1.77311 8.17847L1.44002 7.84211C1.19109 7.59074 1.04704 7.24987 1.04704 6.88109C1.04704 6.35029 1.3473 5.88554 1.79365 5.65864L2.23526 5.43415L2.01488 4.99049C1.92231 4.80414 1.87299 4.59759 1.87299 4.37886C1.87299 3.84753 2.17384 3.38263 2.62046 3.15559L3.06226 2.93101L2.84158 2.48725C2.70399 2.21055 2.66183 1.88909 2.73283 1.56402C2.86462 0.962073 3.43743 0.499963 4.11602 0.499963L11.6976 0.499964C11.9808 0.499964 12.3945 0.558237 12.8232 0.678074C13.0676 0.746406 13.2625 1.00119 13.2625 1.35143L13.2625 9.12797C13.2625 9.25479 13.2344 9.38004 13.1803 9.49475L10.9622 14.1985C10.8452 14.4466 10.7846 14.7175 10.7846 14.9918L10.7846 17.4752C10.648 17.5714 10.2051 17.8496 9.63266 17.8496C9.51885 17.8496 9.3362 17.8003 9.10539 17.6575C8.8808 17.5186 8.64132 17.3095 8.4215 17.0423C7.97939 16.5047 7.65476 15.7795 7.65476 15.0133C7.65476 14.1757 7.89596 13.1417 8.12618 12.3541C8.2945 11.7783 7.87162 11.177 7.25 11.177L2.71024 11.177C1.83939 11.177 1.12574 10.5262 1.05409 9.7409C1.01307 9.28583 1.16315 8.85242 1.45545 8.52945Z" fill="#B0019E" stroke="#B0019E"/>
+								</svg>
+							</div>
+						</div>
+
+						<div class="message">
+							<p><span>Подключил интернет от РТ в надежде получить более качественный сервис по сравнению с существующим оператором. В итоге мне помогли специалисты, но все равно остался осадок.</span> <b>Читать дальше...</b></p>
+						</div>	
+					</div>
+				</div>
+			</div>
+
+		</div> <!-- class="review" -->
+
+
+		<div class="gift">
+			<h1 id="gift">Дарим подарки <br> при подключении</h1>
+			<button class="confirm" id="gift_btn" data-bs-toggle="modal" href="#exampleModalToggle3">Хочу подарок</button>
+		</div>
+
+		<div class="questions">
+			<h1 id="tariff">Часто задаваемые вопросы</h1><br>
+
+			<div class="pesontedan" id="pesontedan">
+				<input id="pesontedan-2" type="checkbox" name="pesontedans">
+				<label for="pesontedan-2" id="question">Как найти провайдера по адресу дома?</label>
+				<div class="pesontedan-content" id="question1">
+					Выберите подходящий тариф и нужные опции. Заполните заявку. Мы свяжемся с вами, уточним детали подключения и назначим выезд специалиста в удобное для вас время
+				</div>
+			</div>
+			<div class="pesontedan" id="pesontedan">
+				<input id="pesontedan-3" type="checkbox" name="pesontedans">
+				<label for="pesontedan-3" id="question">Как найти провайдера по адресу дома?</label>
+				<div class="pesontedan-content" id="question1">
+					Выберите подходящий тариф и нужные опции. Заполните заявку. Мы свяжемся с вами, уточним детали подключения и назначим выезд специалиста в удобное для вас время
+				</div>
+			</div>
+			<div class="pesontedan" id="pesontedan">
+				<input id="pesontedan-4" type="checkbox" name="pesontedans">
+				<label for="pesontedan-4" id="question">Как найти провайдера по адресу дома?</label>
+				<div class="pesontedan-content" id="question1">
+					Выберите подходящий тариф и нужные опции. Заполните заявку. Мы свяжемся с вами, уточним детали подключения и назначим выезд специалиста в удобное для вас время
+				</div>
+			</div>
+			<div class="pesontedan" id="pesontedan">
+				<input id="pesontedan-5" type="checkbox" name="pesontedans">
+				<label for="pesontedan-5" id="question">Как найти провайдера по адресу дома?</label>
+				<div class="pesontedan-content" id="question1">
+					Выберите подходящий тариф и нужные опции. Заполните заявку. Мы свяжемся с вами, уточним детали подключения и назначим выезд специалиста в удобное для вас время
+				</div>
+			</div>
+		</div>
+
+
+		<footer>
+			<img src="img/logo2.png" id="logo2">
+			<div class="row" id="footer"> 
+				<div class="col">
+					<p class="telef">8 (800) 1000 800</p>
+				</div>
+				<div class="col">
+					<p class="con_footer">Подключение</p>
+				</div>
+			</div>
+			<div class="row"> 
+				<div class="col">
+					<p class="description_footer">Проверить кабель в новой квартире, переоформить договор на другого жильца, переезд на другой адрес, подключиться на новом адресе.</p>
+				</div>
+			</div>
+
+			<div class="row" id="footer"> 
+				<div class="col">
+					<p class="telef">8 (800) 2000 800</p>
+				</div>
+				<div class="col">
+					<p class="con_footer">Тех. поддержка</p>
+				</div>
+			</div>
+			<div class="row"> 
+				<div class="col">
+					<p class="description_footer">Техническая поддержка действующих клиентов. Если не работает интернет или телевидение, тормозит интернет, проверить/пополнить баоанс, отключить услуги, рассторгнуть договор.</p>
+				</div>
+			</div>
+
+			<div class="row" > 
+				<div class="col">
+					<p class="under_footer">
+						rtk.online.net - официальный партнер ПАО “Ростелеком”
+						ООО “Выбирай.нет” (Юридический адрес: 660020, Красноярский край, г. Красноярск, ул. Диксона, д. 2а, офис 1-2; ОГРН 1192468027124; ИНН 2466280332),  Тел. 8(800) 800 1000
+						Информация размещена на сайте на основании договора с ПАО “Ростелеком” №!!/!!/!!-!! и не является публичной офертой. Отправляя заявку, вы даете свое согласие на обработку персональных данных и соглашаетесь с Политикой обработки персональных данных.
+						©Права на товарный знак “Ростелеком” принадлежат ПАО “Ростелеком”
+					</p>
+				</div>
+			</div>
+
+		</footer>
+
+	</div>
+</body>
+</html>

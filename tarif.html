@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>provayder.net</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<!-- Модальные (всплывающие) окна --> 
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body" id="modal-body">
+        <h1>Данные успешно отправлены!</h1>
+        <p class="modal_p">В течение 15 минут наш оператор свяжется с вами для подтверждения выбранного тарифа.</p>
+        <p class="modal_respect">Мы очень ценим вас!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header">
+    	<h1>Что вас интересует?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <button class="modal_batton1" data-bs-toggle="modal" href="#exampleModalToggle3">Подключение</button><br>
+        <button class="modal_batton2" data-bs-toggle="modal" href="#exampleModalToggle4">Другие вопросы</button><br>
+        <button class="modal_batton2" data-bs-toggle="modal" href="#exampleModalToggle5">Заказать обратный звонок</button><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header">
+    	<h1>Отличные новости!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-body">
+      	<p class="modal_p">Клиентам после подключения мы дарим подарки от наших партнеров.</p>
+      	<p class="modal_p"><b>Узнать условия и получить консультацию</b></p>
+      	<input type="text" name="" placeholder="Введите  ваш город" id="input_modal">
+		<input type="text" name="" placeholder="Введите  ваш телефон" id="input_modal"><br><br>
+		<button class="modal_batton3" data-bs-toggle="modal" href="#exampleModalToggle">Отправить</button><br>
+		<p class="modal_politics">Отправляя заявку, вы соглашаетесь с политикой обработки персональных данных</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header">
+    	<h1>У вас вопрос?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-body" style="text-align: left;">
+      	<p class="modal_p">Если вам нужна техническая поддержка действующих клиентов. Если не работает интернет или телевидение, тормозит интернет, вы хотите проверить/пополнить баланс, отключить услуги, рассторгнуть договор.</p>
+      	<p class="modal_p">Свяжитесь по телефону технической поддержки</p>
+      	<h1 class="modal_h1">8 800 1000 800</h1>
+      	<p class="modal_p">Если вам нужно проверить кабель в новой квартире, переоформить договор на другого жильца, у вас переезд на другой адрес или подключение на новом адресе.</p>
+      	<p class="modal_p">Свяжитесь по телефону отдела продаж</p>
+      	<h1 class="modal_h1">8 800 2000 800</h1>
+    	</div>
+  </div>
+</div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle5" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header">
+    	<h1>Узнать условия и получить консультацию</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-body">
+      	<input type="text" name="" placeholder="Введите  ваш город" id="input_modal">
+		<input type="text" name="" placeholder="Введите  ваш телефон" id="input_modal"><br><br>
+		<button class="modal_batton3" data-bs-toggle="modal" href="#exampleModalToggle">Отправить</button><br>
+		<p class="modal_politics">Отправляя заявку, вы соглашаетесь с политикой обработки персональных данных</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle8" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header">
+    	<h1>Отлично, теперь введите ваш адрес</h1>
+      </div>
+      <div class="modal-body" id="modal-body">
+      	<p class="modal_p">Мы проверим возможность подключения по адресу и свободные порты</p>
+		<input type="text" name="" placeholder="Введите ваш город" id="input_modal"><br>
+		<input type="text" name="" placeholder="Ваша улица" id="input_modal">
+		<input type="text" name="" placeholder="№ Дома" id="input_modal"><br><br>
+		<button class="modal_batton3" data-bs-toggle="modal" href="#exampleModalToggle9">Продолжить</button><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle9" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header">
+    	<h1>Остался последний шаг!</h1>
+      </div>
+      <div class="modal-body" id="modal-body">
+      	<p class="modal_p">Напишите ваше имя и номер телефона.</p>
+      	<p class="modal_p"><b>Оператор свяжется с вами!</b></p>
+		<input type="text" name="" placeholder="Введите ваш город" id="input_modal"><br>
+		<input type="text" name="" placeholder="Введите ваше имя" id="input_modal">
+		<input type="text" name="" placeholder="Введите номер телефона" id="input_modal"><br><br>
+		<button class="modal_batton3" data-bs-toggle="modal" href="#exampleModalToggle">Готово</button><br>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalToggle11" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header">
+    	<h1><b>Выберите город</b></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-body">
+		<input type="text" name="" placeholder="Поиск" id="input_modal">
+		<p class="modal_geo"><img src="img/geo.jpg" width="11px" height="14px"> Определить автоматически</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<body>
+	<div class="main">
+		<nav class="navbar navbar-expand-lg navbar-light bg-white" id="nav">
+			<div class="container-fluid">
+		    	<a class="navbar-brand" href="index.html"><img src="img/logo.jpg" id="logo"></a>
+		        <a href="#exampleModalToggle2" data-bs-toggle="modal"><img src="img/tel.jpg" id="tel"></a>
+		  	</div>
+		</nav>
+
+		<div class="line"></div>
+
+		<div class="region">
+			<div class="row"> 
+				<div class="col">
+					<img src="img/geo.jpg" id="geo">
+				</div>
+				<div class="col">
+					<p class="geo_name">Москва и Московская область</p>
+				</div>
+				<div class="col">
+					<button class="change_region" href="#exampleModalToggle11" data-bs-toggle="modal">Изменить регион</button>
+				</div>
+			</div>
+		</div>
+		<div class="tariff">
+			<h1 id="tariff">Тариф «Технология выгоды» от Ростелеком Москва</h1>
+		</div>
+
+		<div class="home_internet">
+			<div class="sale_tariff">Акция</div>
+			<div class="sale_dom">Домашний интернет</div>
+			<div class="row" id="offers"> 
+				<div class="col">	
+					<p>
+						<img src="img/wifi.png" id="img_tarif">
+						<h1 id="price_tarif">500</h1>
+						<p class="mbs1">Мбит/с</p>
+					</p>
+					
+				</div>
+				<div class="col">	
+					<p>
+						<img src="img/tv.png" id="img_tarif">
+						<h1 id="price_tarif">183</h1>
+						<p class="mbs1">Канала</p>
+					</p>
+				</div>
+				<div class="col">	
+					<p>
+						<img src="img/gb.png" id="img_tarif">
+						<h1 id="price_tarif1">2000</h1>
+						<p class="mbs1">Минут</p>
+					</p>
+				</div>
+			</div>
+			<div class="row" id="router">
+				<div class="col">
+					<p class="router"><img src="img/router.jpg" id="img_tarif2">&nbsp; WI-FI роутер</p>
+					<p class="router"><img src="img/pristavka.jpg" id="img_tarif2">&nbsp; ТВ приставка</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<button class="connect_tariff" href="#exampleModalToggle8" data-bs-toggle="modal">Подключить</button>
+				</div>
+				<div class="col">
+					<h1 class="price_h">600 ₽</h1>
+					<p class="month_h">В месяц</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="chek_connect">Проверить возможность подключения</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="tariff">
+			<h1 id="tariff">Услуги</h1>
+			<div class="services">
+				<div class="serv">
+					<h3 class="speed">Скорость интернета</h3>
+					<h1 class="speed2">500 мбит/сек</h1>
+					<img src="img/helper.jpg" title = "Подсказка1" id="helper">
+				</div>
+				<div class="serv">
+					<h3 class="speed">Трафик</h3>
+					<h1 class="speed2">безлимит</h1>
+					<img src="img/helper.jpg" title = "Подсказка2" id="helper">
+				</div>
+				<div class="serv">
+					<h3 class="speed">Количество SMS</h3>
+					<h1 class="speed2">безлимит</h1>
+					<img src="img/helper.jpg" title = "Подсказка3" id="helper">
+				</div>
+				<div class="serv">
+					<h3 class="speed">Количество каналов</h3>
+					<h1 class="speed2">183</h1>
+					<img src="img/helper.jpg" title = "Подсказка4" id="helper">
+				</div>
+				<div class="serv">
+					<h3 class="speed">Абонентская плата (в месяц)</h3>
+					<h1 class="speed2">600 ₽</h1>
+					<img src="img/helper.jpg" title = "Подсказка5" id="helper">
+				</div>
+			</div>
+		</div>
+
+		<div class="tariff">
+			<h1 id="tariff">Оборудование</h1>
+			<div class="services">
+				<div class="equipment">
+					<h3 class="speed"><input type="checkbox" class="form-check-input" name="" value="WI-FI роутер">
+						&nbsp; <img src="img/router2.jpg" id="complect_img"> &nbsp; WI-FI роутер
+					</h3>
+					<h1 class="speed2" id="complect">В комплекте</h1>
+					<img src="img/helper.jpg" title = "Подсказка6" id="helper2">
+				</div>
+				<div class="equipment2">
+					<h3 class="speed">
+						&nbsp; <img src="img/up.jpg" id="complect_pristavka"> &nbsp; <img src="img/pristavka2.jpg" id="complect_img"> &nbsp; ТВ приставка
+					</h3>
+					<img src="img/helper.jpg" title = "Подсказка 7" id="helper3">
+
+					<div class="line2"></div>
+
+					<div class="equ">
+						<h3 class="speed3"><input type="checkbox" class="form-check-input" name="" value="ТВ приставка X96 MINI">
+						&nbsp; <img src="img/tv_pristavka.jpg" id="tv_pristavka"> &nbsp; ТВ приставка X96 MINI
+						</h3>
+						<div class="description_tv">
+							<div class="row">
+								<div class="col">
+									<p class="p_tv">Скорость соединения </p>
+									<p class="p_tv">Площадь покрытия </p>
+									<p class="p_tv">Одновременно в сети </p>
+								</div>
+								<div class="col">
+									<p class="span_tv">500 Мбит/с</p>
+									<p class="span_tv">65 кв.м</p>
+									<p class="span_tv">10 устройств</p>
+								</div>
+							</div>
+							<div class="purchase">
+								<div class="row">
+									<div class="col">
+										<h3>Покупка</h3>
+									</div>
+									<div class="col" id="col_down">
+										<img src="img/down.png" id="down">
+									</div>
+								</div>	
+							</div>
+						</div>
+					</div>
+
+					<div class="equ">
+						<h3 class="speed3"><input type="checkbox" class="form-check-input" name="" value="ТВ приставка X96 MINI">
+						&nbsp; <img src="img/tv_pristavka.jpg" id="tv_pristavka"> &nbsp; ТВ приставка X96 MINI
+						</h3>
+						<div class="description_tv">
+							<div class="row">
+								<div class="col">
+									<p class="p_tv">Скорость соединения </p>
+									<p class="p_tv">Площадь покрытия </p>
+									<p class="p_tv">Одновременно в сети </p>
+								</div>
+								<div class="col">
+									<p class="span_tv">700 Мбит/с</p>
+									<p class="span_tv">80 кв.м</p>
+									<p class="span_tv">12 устройств</p>
+								</div>
+							</div>
+							<div class="purchase">
+								<div class="row">
+									<div class="col">
+										<h3>Покупка</h3>
+									</div>
+									<div class="col" id="col_down">
+										<img src="img/down.png" id="down">
+									</div>
+								</div>	
+							</div>
+						</div>
+					</div>
+
+
+					<div class="finish_price">
+						<h1 class="speed2" id="complect">6000 ₽</h1>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+
+		<div class="tariff">
+			<h1 id="tariff">Дополнительные опции</h1>
+			<div class="services">
+				<div class="equipment" id="equipment_ex">
+					<h3 class="speed"><input type="checkbox" class="form-check-input" name="" value="WI-FI роутер">
+						&nbsp; Мультирум
+					</h3>
+					<p class="equ_description">ТВ приставка работает под 
+					управлением новейшей операционной системы, обеспечивает быструю работу и разработана для того, 
+					чтобы превратить ваш обычный телевизор в Смарт ТВ</p>
+					<h1 class="speed2" id="complect">1600 ₽</h1>
+					<img src="img/helper.jpg" title = "Подсказка6" id="helper4">
+				</div>
+				<div class="equipment">
+					<h3 class="speed"><input type="checkbox" class="form-check-input" name="" value="WI-FI роутер">
+						&nbsp; Подписка на More.TV
+					</h3>
+					<h1 class="speed2" id="complect">3000 ₽</h1>
+					<img src="img/helper.jpg" title = "Подсказка6" id="helper2">
+				</div>
+
+				<div class="equipment">
+					<h3 class="speed"><input type="checkbox" class="form-check-input" name="" value="WI-FI роутер">
+						&nbsp; Подписка на IVI
+					</h3>
+					<h1 class="speed2" id="complect">3000 ₽</h1>
+					<img src="img/helper.jpg" title = "Подсказка6" id="helper2">
+				</div>
+
+				<div class="equipment">
+					<h3 class="speed"><input type="checkbox" class="form-check-input" name="" value="WI-FI роутер">
+						&nbsp; Видеонаблюдение
+					</h3>
+					<h1 class="speed2" id="complect">9000 ₽</h1>
+					<img src="img/helper.jpg" title = "Подсказка6" id="helper2">
+				</div>
+
+				<div class="equipment">
+					<h3 class="speed"><input type="checkbox" class="form-check-input" name="" value="WI-FI роутер">
+						&nbsp; Безлимитные мессенджеры
+					</h3>
+					<h1 class="speed2" id="complect">1200 ₽</h1>
+					<img src="img/helper.jpg" title = "Подсказка6" id="helper2">
+				</div>
+
+				<div class="equipment">
+					<h3 class="speed"><input type="checkbox" class="form-check-input" name="" value="WI-FI роутер">
+						&nbsp; Антивирус Dr.Web
+					</h3>
+					<h1 class="speed2" id="complect">1200 ₽</h1>
+					<img src="img/helper.jpg" title = "Подсказка6" id="helper2">
+				</div>
+
+				<div class="equipment">
+					<h3 class="speed"><input type="checkbox" class="form-check-input" name="" value="WI-FI роутер">
+						&nbsp; Месяц бесплатного интернета
+					</h3>
+					<h1 class="speed2" id="complect">0 ₽</h1>
+					<img src="img/helper.jpg" title = "Подсказка6" id="helper2">
+				</div>
+
+				<div class="equipment">
+					<h3 class="speed"><input type="checkbox" class="form-check-input" name="" value="WI-FI роутер">
+						&nbsp; Белый IP
+					</h3>
+					<h1 class="speed2" id="complect">0 ₽</h1>
+					<img src="img/helper.jpg" title = "Подсказка6" id="helper2">
+				</div>
+
+			</div>
+		</div>
+
+		<div class="tariff">
+			<h1 id="tariff">Примечания</h1>
+			<div class="notes">
+				<p id="note">
+					<img src="img/galka.jpg" id="galka">&nbsp;	Интернет, ЦТВ, Мобильная связь
+				</p>
+
+				<p id="note">
+					<img src="img/galka.jpg" id="galka">&nbsp;	Тарифный план для физических лиц в многоквартирных домах
+				</p>
+
+				<p id="note">
+					<img src="img/galka.jpg" id="galka">&nbsp;	Технология подключения: витая пара
+				</p>
+
+				<p id="note">
+					<img src="img/galka.jpg" id="galka">&nbsp;	Списание абонентской платы: раз в месяц
+				</p>
+
+				<p id="note">
+					<img src="img/galka.jpg" id="galka">&nbsp;	Безлимитный мобильный интернет, раздача Wi-Fi, безлимитные мессенджеры и SMS , звонки на «любимый» номер бесплатны и не расходуют пакет, бесплатные коллекции фильмов и сериалов, безлимитные звонки внутри семьи — всё это включено в тариф
+				</p>
+
+				<p id="note">
+					<img src="img/galka.jpg" id="galka">&nbsp;	С параметрами мобильной связи можно ознакомиться по ссылке: <a id="a">https://provayder.net/actions/domashniy-internet-i-televidenie-besplatno/ </a>
+				</p>
+			</div>
+		</div>
+
+		<div class="tariff">
+			<h1 id="tariff">Стоимость подключения</h1>
+			<div class="price_final_tarif">
+				<h2 id="benefit">Технология выгоды</h2>
+				<div class="row" id="row_one">
+					<div class="col" id="one">
+						<nobr>Абонентская плата</nobr>
+					</div>
+					<div class="col" id="two">
+						700 ₽
+					</div>
+					<div class="col" id="tree">
+						Месяц
+					</div>
+				</div>
+				<div class="line3"></div>
+
+				<div class="row" id="row_one">
+					<div class="col" id="one">
+						<nobr>Аренда оборудования</nobr>
+					</div>
+					<div class="col" id="two">
+						30 ₽
+					</div>
+					<div class="col" id="tree">
+						Месяц
+					</div>
+				</div>
+				<div class="line3"></div>
+
+				<div class="row" id="row_one">
+					<div class="col" id="one">
+						<nobr>Рассрочка оборудования</nobr>
+					</div>
+					<div class="col" id="two">
+						120 ₽
+					</div>
+					<div class="col" id="tree">
+						Месяц
+					</div>
+				</div>
+				<div class="line3"></div>
+
+				<div class="row" id="row_one">
+					<div class="col" id="one">
+						<nobr>Дополнительные услуги</nobr>
+					</div>
+					<div class="col" id="two">
+						0 ₽
+					</div>
+					<div class="col" id="tree">
+						Месяц
+					</div>
+				</div>
+				<div class="line3"></div>
+
+				<div class="row" id="row_one">
+					<div class="col" id="one">
+						<nobr>Разовый платеж</nobr>
+					</div>
+					<div class="col" id="two">
+						550 ₽
+					</div>
+					<div class="col" id="tree">
+						Месяц
+					</div>
+				</div>
+				<div class="line3"></div>
+				<div class="fot">
+					<p class="low">Итого абонентская плата за месяц <h1 class="h1_low">850 ₽</h1></p>
+					<p class="low">Итого первый платеж (разовый) <h1 class="h1_low">1400 ₽</h1></p>
+					<button class="itog_connect" href="#exampleModalToggle8" data-bs-toggle="modal">Подключить тариф</button>
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+		<br><br><br>
+		<footer class="footer">
+			<img src="img/logo2.png" id="logo2">
+			<div class="row" id="footer"> 
+				<div class="col">
+					<p class="telef">8 (800) 1000 800</p>
+				</div>
+				<div class="col">
+					<p class="con_footer">Подключение</p>
+				</div>
+			</div>
+			<div class="row"> 
+				<div class="col">
+					<p class="description_footer">Проверить кабель в новой квартире, переоформить договор на другого жильца, переезд на другой адрес, подключиться на новом адресе.</p>
+				</div>
+			</div>
+
+			<div class="row" id="footer"> 
+				<div class="col">
+					<p class="telef">8 (800) 2000 800</p>
+				</div>
+				<div class="col">
+					<p class="con_footer">Тех. поддержка</p>
+				</div>
+			</div>
+			<div class="row"> 
+				<div class="col">
+					<p class="description_footer">Техническая поддержка действующих клиентов. Если не работает интернет или телевидение, тормозит интернет, проверить/пополнить баоанс, отключить услуги, рассторгнуть договор.</p>
+				</div>
+			</div>
+		</footer>
+			<div class="row" > 
+				<div class="col">
+					<div class="orange">
+						<table>
+							<tr>
+								<td>
+									<p class="price" id="footer_price">5000 ₽</p>
+									<p class="month" id="month">В месяц</p>
+								</td>
+								<td>
+									<button class="connect_footer" href="#exampleModalToggle8" data-bs-toggle="modal">Подключить</button>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+	</div>
+</body>
+</html>
