@@ -8,6 +8,7 @@
 	<title>provayder.net</title>
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
@@ -19,6 +20,7 @@
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
+    	<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="modal_close"></button>
       <div class="modal-body" id="modal-body">
         <h1>Данные успешно отправлены!</h1>
         <p class="modal_p">В течение 15 минут наш оператор свяжется с вами для подтверждения выбранного тарифа.</p>
@@ -99,11 +101,49 @@
   </div>
 </div>
 
+<div class="modal fade" id="exampleModalToggle6" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header">
+    	<h1>Хорошие новости!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-body">
+      	<p class="modal_p">По вашему адресу можно подключить услуги от 250 руб/мес и скоростью до 1000 мбит/с.</p>
+      	<button class="modal_batton1" data-bs-toggle="modal" href="">Показать тарифы</button><br>
+      	<p class="modal_p"><b>Или оставить заявку для консультации</b></p>
+		<input type="text" name="" placeholder="Введите  ваш телефон" id="input_modal"><br><br>
+		<button class="modal_batton3" data-bs-toggle="modal" href="#exampleModalToggle">Отправить</button><br>
+		<p class="modal_politics">Отправляя заявку, вы соглашаетесь с политикой обработки персональных данных</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle7" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header">
+    	<h1>Интересные новости!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-body">
+      	<p class="modal_p">По вашему адресу требуется дополнительная проверка по доступности подключения.</p>
+      	<p class="modal_p"><b>Наш специалист проверит информацию и перезвонит вам в течение 15 минут!</b></p>
+		<input type="text" name="" placeholder="Введите ваш телефон" id="input_modal"><br><br>
+		<button class="modal_batton3" data-bs-toggle="modal" href="#exampleModalToggle">Отправить</button><br>
+		<p class="modal_politics">Отправляя заявку, вы соглашаетесь с политикой обработки персональных данных</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="modal fade" id="exampleModalToggle8" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
     <div class="modal-header">
     	<h1>Отлично, теперь введите ваш адрес</h1>
+    	<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" id="modal-body">
       	<p class="modal_p">Мы проверим возможность подключения по адресу и свободные порты</p>
@@ -121,6 +161,7 @@
     <div class="modal-content">
     <div class="modal-header">
     	<h1>Остался последний шаг!</h1>
+    	<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" id="modal-body">
       	<p class="modal_p">Напишите ваше имя и номер телефона.</p>
@@ -133,6 +174,66 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="exampleModalToggle10" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    	<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="modal_close"></button>
+      <div class="modal-body" id="modal-body">
+      	<img src="img/logo.jpg" width="82px">
+      	<h1><b>ИНТЕРНЕТ+ТВ+СВЯЗЬ</b></h1>
+      	<p>Технология выгоды. PRO</p>
+      	<div class="modal_bod">
+      		<h1>Подключение тарифа</h1>
+      		<div class="row">
+      			<div class="col" id="modal_img1">
+      				<img src="img/wifi.png" width="24px">
+      				<p><b>200</b></p>
+      				<p class="modal_p_tarif">Мбит/с</p>
+      			</div>
+      			<div class="col" id="modal_img2">
+      				<img src="img/gb.png" width="24px">
+      				<p><b>50</b></p>
+      				<p class="modal_p_tarif">ГБ</p>
+      			</div>
+      			<div class="col" id="modal_img2">
+      				<img src="img/tv.png" width="24px">
+      				<p><b>146</b></p>
+      				<p class="modal_p_tarif">Каналов</p>
+      			</div>
+      		</div>
+      		<input type="text" name="" placeholder="Введите ваше имя" id="input_modal">
+		<input type="text" name="" placeholder="Введите ваш телефон" id="input_modal">
+		<input type="text" name="" placeholder="Введите ваш город" id="input_modal">
+		<input type="text" name="" placeholder="Ваша улица" id="input_modal_street" id="street">
+		<input type="text" name="" placeholder="№ дома" id="input_modal_street1"><br><br>
+
+		<div class="row">
+			<div class="col" id="rad">
+				<nobr>Стоимость подключения</nobr>
+			</div>
+			<div class="col" id="rad1">
+				<nobr>0 ₽</nobr>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col" id="rad">
+				<nobr>Абонентская плата в месяц</nobr>
+			</div>
+			<div class="col" id="rad1">
+				<nobr>1470 ₽</nobr>
+			</div>
+		</div>
+		<br>
+		<button class="modal_batton1" data-bs-toggle="modal" href="#exampleModalToggle">Отправить</button>
+
+		<p class="modal_politics">Отправляя заявку, вы соглашаетесь с политикой обработки персональных данных</p>
+      	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="modal fade" id="exampleModalToggle11" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -151,6 +252,12 @@
 
 
 <body>
+	<script>
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		  return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+	</script>
 	<div class="main">
 		<nav class="navbar navbar-expand-lg navbar-light bg-white" id="nav">
 			<div class="container-fluid">
@@ -222,7 +329,7 @@
 			</div>
 			<div class="row">
 				<div class="col">
-					<p class="chek_connect">Проверить возможность подключения</p>
+					<p class="chek_connect"><a href="#exampleModalToggle6" data-bs-toggle="modal" id="chek_connect_a">Проверить возможность подключения</a></p>
 				</div>
 			</div>
 		</div>
@@ -233,27 +340,27 @@
 				<div class="serv">
 					<h3 class="speed">Скорость интернета</h3>
 					<h1 class="speed2">500 мбит/сек</h1>
-					<img src="img/helper.jpg" title = "Подсказка1" id="helper">
+					<img src="img/helper.jpg" data-bs-toggle="tooltip" data-bs-placement="left" title = "Подсказка" id="helper">
 				</div>
 				<div class="serv">
 					<h3 class="speed">Трафик</h3>
 					<h1 class="speed2">безлимит</h1>
-					<img src="img/helper.jpg" title = "Подсказка2" id="helper">
+					<img src="img/helper.jpg" data-bs-toggle="tooltip" data-bs-placement="left" title = "Подсказка2" id="helper">
 				</div>
 				<div class="serv">
 					<h3 class="speed">Количество SMS</h3>
 					<h1 class="speed2">безлимит</h1>
-					<img src="img/helper.jpg" title = "Подсказка3" id="helper">
+					<img src="img/helper.jpg" data-bs-toggle="tooltip" data-bs-placement="left" title = "Подсказка3" id="helper">
 				</div>
 				<div class="serv">
 					<h3 class="speed">Количество каналов</h3>
 					<h1 class="speed2">183</h1>
-					<img src="img/helper.jpg" title = "Подсказка4" id="helper">
+					<img src="img/helper.jpg" data-bs-toggle="tooltip" data-bs-placement="left" title = "Подсказка4" id="helper">
 				</div>
 				<div class="serv">
 					<h3 class="speed">Абонентская плата (в месяц)</h3>
 					<h1 class="speed2">600 ₽</h1>
-					<img src="img/helper.jpg" title = "Подсказка5" id="helper">
+					<img src="img/helper.jpg" data-bs-toggle="tooltip" data-bs-placement="left" title = "Подсказка5" id="helper">
 				</div>
 			</div>
 		</div>
@@ -266,13 +373,13 @@
 						&nbsp; <img src="img/router2.jpg" id="complect_img"> &nbsp; WI-FI роутер
 					</h3>
 					<h1 class="speed2" id="complect">В комплекте</h1>
-					<img src="img/helper.jpg" title = "Подсказка6" id="helper2">
+					<img src="img/helper.jpg" data-bs-toggle="tooltip" data-bs-placement="left" title = "Подсказка6" id="helper2">
 				</div>
 				<div class="equipment2">
 					<h3 class="speed">
 						&nbsp; <img src="img/up.jpg" id="complect_pristavka"> &nbsp; <img src="img/pristavka2.jpg" id="complect_img"> &nbsp; ТВ приставка
 					</h3>
-					<img src="img/helper.jpg" title = "Подсказка 7" id="helper3">
+					<img src="img/helper.jpg" data-bs-toggle="tooltip" data-bs-placement="left" title = "Подсказка 7" id="helper3">
 
 					<div class="line2"></div>
 
@@ -293,15 +400,17 @@
 									<p class="span_tv">10 устройств</p>
 								</div>
 							</div>
-							<div class="purchase">
-								<div class="row">
-									<div class="col">
-										<h3>Покупка</h3>
-									</div>
-									<div class="col" id="col_down">
-										<img src="img/down.png" id="down">
-									</div>
-								</div>	
+							<div>
+								<form>
+									<p><select class="pur">
+										<optgroup>
+									     <option value="Покупка">Покупка</option>
+									     <option value="Аренда">Аренда</option>
+									     <option value="Рассрочка на 24 месяца">Рассрочка на 24 месяца</option>
+									    </optgroup>
+									  	</select>
+									  </p>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -323,16 +432,16 @@
 									<p class="span_tv">12 устройств</p>
 								</div>
 							</div>
-							<div class="purchase">
-								<div class="row">
-									<div class="col">
-										<h3>Покупка</h3>
-									</div>
-									<div class="col" id="col_down">
-										<img src="img/down.png" id="down">
-									</div>
-								</div>	
-							</div>
+							<form>
+								<p><select class="pur">
+									<optgroup>
+								     <option value="Покупка">Покупка</option>
+								     <option value="Аренда">Аренда</option>
+								     <option value="Рассрочка на 24 месяца">Рассрочка на 24 месяца</option>
+								    </optgroup>
+								 	</select>
+								</p>
+							</form>
 						</div>
 					</div>
 
@@ -357,14 +466,14 @@
 					управлением новейшей операционной системы, обеспечивает быструю работу и разработана для того, 
 					чтобы превратить ваш обычный телевизор в Смарт ТВ</p>
 					<h1 class="speed2" id="complect">1600 ₽</h1>
-					<img src="img/helper.jpg" title = "Подсказка6" id="helper4">
+					<img src="img/helper.jpg" data-bs-toggle="tooltip" data-bs-placement="left" title = "Подсказка6" id="helper4">
 				</div>
 				<div class="equipment">
 					<h3 class="speed"><input type="checkbox" class="form-check-input" name="" value="WI-FI роутер">
 						&nbsp; Подписка на More.TV
 					</h3>
 					<h1 class="speed2" id="complect">3000 ₽</h1>
-					<img src="img/helper.jpg" title = "Подсказка6" id="helper2">
+					<img src="img/helper.jpg" data-bs-toggle="tooltip" data-bs-placement="left" title = "Подсказка6" id="helper2">
 				</div>
 
 				<div class="equipment">
@@ -372,7 +481,7 @@
 						&nbsp; Подписка на IVI
 					</h3>
 					<h1 class="speed2" id="complect">3000 ₽</h1>
-					<img src="img/helper.jpg" title = "Подсказка6" id="helper2">
+					<img src="img/helper.jpg" data-bs-toggle="tooltip" data-bs-placement="left" title = "Подсказка6" id="helper2">
 				</div>
 
 				<div class="equipment">
@@ -380,7 +489,7 @@
 						&nbsp; Видеонаблюдение
 					</h3>
 					<h1 class="speed2" id="complect">9000 ₽</h1>
-					<img src="img/helper.jpg" title = "Подсказка6" id="helper2">
+					<img src="img/helper.jpg" data-bs-toggle="tooltip" data-bs-placement="left" title = "Подсказка6" id="helper2">
 				</div>
 
 				<div class="equipment">
@@ -388,7 +497,7 @@
 						&nbsp; Безлимитные мессенджеры
 					</h3>
 					<h1 class="speed2" id="complect">1200 ₽</h1>
-					<img src="img/helper.jpg" title = "Подсказка6" id="helper2">
+					<img src="img/helper.jpg" data-bs-toggle="tooltip" data-bs-placement="left" title = "Подсказка6" id="helper2">
 				</div>
 
 				<div class="equipment">
@@ -396,7 +505,7 @@
 						&nbsp; Антивирус Dr.Web
 					</h3>
 					<h1 class="speed2" id="complect">1200 ₽</h1>
-					<img src="img/helper.jpg" title = "Подсказка6" id="helper2">
+					<img src="img/helper.jpg" data-bs-toggle="tooltip" data-bs-placement="left" title = "Подсказка6" id="helper2">
 				</div>
 
 				<div class="equipment">
@@ -404,7 +513,7 @@
 						&nbsp; Месяц бесплатного интернета
 					</h3>
 					<h1 class="speed2" id="complect">0 ₽</h1>
-					<img src="img/helper.jpg" title = "Подсказка6" id="helper2">
+					<img src="img/helper.jpg" data-bs-toggle="tooltip" data-bs-placement="left" title = "Подсказка6" id="helper2">
 				</div>
 
 				<div class="equipment">
@@ -412,7 +521,7 @@
 						&nbsp; Белый IP
 					</h3>
 					<h1 class="speed2" id="complect">0 ₽</h1>
-					<img src="img/helper.jpg" title = "Подсказка6" id="helper2">
+					<img src="img/helper.jpg" data-bs-toggle="tooltip" data-bs-placement="left" title = "Подсказка6" id="helper2">
 				</div>
 
 			</div>
@@ -511,7 +620,7 @@
 						550 ₽
 					</div>
 					<div class="col" id="tree">
-						Месяц
+						
 					</div>
 				</div>
 				<div class="line3"></div>
@@ -576,5 +685,11 @@
 				</div>
 			</div>
 	</div>
+	<script >
+	 	var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		  return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+	</script>
 </body>
 </html>
