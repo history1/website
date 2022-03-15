@@ -38,7 +38,3 @@ document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(1)').oncli
 document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
   Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)+1);
 }
-
-document.getElementById("#calendar2 tbody td").onclick = function(){
-            this.style.backgroundColor ="#F39205;";
-};

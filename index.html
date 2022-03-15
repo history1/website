@@ -521,7 +521,15 @@
 			  <tbody>
 			</table>
 			<script src="js/script.js"></script>
-
+			<script type="text/javascript">
+				document.addEventListener('click', function(e) {
+				  if (e.target.tagName === 'TD') {
+				    var el = document.querySelector('.active')
+				    el && el.classList.remove('active')
+				    e.target.classList.add('active')
+				  }
+				})
+			</script>
 			<button class="confirm3" href="#exampleModalToggle8" data-bs-toggle="modal">Выбрать дату</button>
 		</div>
 

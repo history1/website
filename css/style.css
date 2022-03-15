@@ -379,15 +379,14 @@ h3{
 }
 #calendar2 tbody td {
   color: #383838;
+  cursor: pointer;
 }
-#calendar2 tbody td:hover{
-	cursor: pointer;
-}
-#calendar2 tbody td:active{
-	background: #F39205;
-	border-radius: 30px;
+#calendar2 tbody td.active {
+  background: #F39205;
+  border-radius: 30px;
 	color: #ffffff;
 }
+
 
 #calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
   color: #383838;
