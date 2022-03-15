@@ -150,7 +150,7 @@
 		<input type="text" name="" placeholder="Введите ваш город" id="input_modal"><br>
 		<input type="text" name="" placeholder="Ваша улица" id="input_modal">
 		<input type="text" name="" placeholder="№ Дома" id="input_modal"><br><br>
-		<button class="modal_batton3" data-bs-toggle="modal" href="#exampleModalToggle9">Продолжить</button><br>
+		<button class="modal_batton3" data-bs-toggle="modal" href="#exampleModalToggle6">Продолжить</button><br>
       </div>
     </div>
   </div>
@@ -159,11 +159,8 @@
 <div class="modal fade" id="exampleModalToggle9" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-    <div class="modal-header">
-    	<h1>Остался последний шаг!</h1>
-    	<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body" id="modal-body">
+    	<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="modal_close"></button>
+      <div class="modal-body" id="modal-body" style="margin-top: -10px;">
       	<p class="modal_p">Напишите ваше имя и номер телефона.</p>
       	<p class="modal_p"><b>Оператор свяжется с вами!</b></p>
 		<input type="text" name="" placeholder="Введите ваш город" id="input_modal"><br>
@@ -250,7 +247,6 @@
 </div>
 
 
-
 <body>
 	<script>
 		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -320,7 +316,7 @@
 			</div>
 			<div class="row">
 				<div class="col">
-					<button class="connect_tariff" href="#exampleModalToggle8" data-bs-toggle="modal">Подключить</button>
+					<button class="connect_tariff" href="#exampleModalToggle9" data-bs-toggle="modal">Подключить</button>
 				</div>
 				<div class="col">
 					<h1 class="price_h">600 ₽</h1>
@@ -329,7 +325,7 @@
 			</div>
 			<div class="row">
 				<div class="col">
-					<p class="chek_connect"><a href="#exampleModalToggle6" data-bs-toggle="modal" id="chek_connect_a">Проверить возможность подключения</a></p>
+					<p class="chek_connect"><a href="#exampleModalToggle8" data-bs-toggle="modal" id="chek_connect_a">Проверить возможность подключения</a></p>
 				</div>
 			</div>
 		</div>
@@ -627,7 +623,7 @@
 				<div class="fot">
 					<p class="low">Итого абонентская плата за месяц <h1 class="h1_low">850 ₽</h1></p>
 					<p class="low">Итого первый платеж (разовый) <h1 class="h1_low">1400 ₽</h1></p>
-					<button class="itog_connect" href="#exampleModalToggle8" data-bs-toggle="modal">Подключить тариф</button>
+					<button class="itog_connect" href="#exampleModalToggle9" data-bs-toggle="modal">Подключить тариф</button>
 				</div>
 
 			</div>
@@ -677,7 +673,7 @@
 									<p class="month" id="month">В месяц</p>
 								</td>
 								<td>
-									<button class="connect_footer" href="#exampleModalToggle8" data-bs-toggle="modal">Подключить</button>
+									<button class="connect_footer" href="#exampleModalToggle9" data-bs-toggle="modal">Подключить</button>
 								</td>
 							</tr>
 						</table>
